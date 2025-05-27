@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Mouse Tester - Tony's Tech Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tester-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 650px;
+        }
+        .test-section {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+        .test-section h2 {
+            margin-top: 0;
+            color: #0056b3; /* A techy blue */
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+            font-size: 1.3em;
+        }
+        .test-area {
+            min-height: 60px;
+            background-color: #e9ecef; /* Light grey, good contrast */
+            border: 1px dashed #adb5bd; /* Dashed border for test areas */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            margin-top: 12px;
+            border-radius: 4px;
+            user-select: none;
+            font-style: italic;
+            color: #495057;
+        }
+        .clickable-area {
+            padding: 12px 25px;
+            background-color: #28a745; /* Green for go/action */
+            color: white;
+            display: inline-block; /* Changed from flex for simpler centering if needed */
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        .clickable-area:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+        .clickable-area:active {
+            background-color: #1e7e34; /* Even darker on active/click */
+            transform: scale(0.97); /* Visual feedback for click */
+        }
+        .instructions {
+            font-size: 0.95em;
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+        a.test-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a.test-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 35px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #6c757d;
+        }
+        header h1 {
+            color: #004085; /* Dark blue for main title */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .site-name {
+            text-align: center;
+            color: #495057;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tester-container">
+        <header>
+            <h1>Mouse Functionality Tester</h1>
+            <p class="site-name">Provided by TonysTechSupport.com.au</p>
+        </header>
+        <p class="instructions" style="text-align:center; margin-bottom:20px; font-weight:bold;">This page helps you manually test your mouse functions. Follow the instructions in each section.</p>
+
+        <div class="test-section">
+            <h2>Left Click Test</h2>
+            <p class="instructions">Click the green button below. If your left mouse button is working, the button should visually react (it will slightly shrink and change color briefly due to CSS active state).</p>
+            <div class="test-area" style="background-color: transparent; border: none; padding-top: 5px;">
+                <div class="clickable-area" tabindex="0">Test Left Click</div>
+            </div>
+            <p class="instructions" style="margin-top: 10px; font-size: 0.8em;"><em>Note: This is a visual test using HTML/CSS. No actual click event is programmatically recorded by this page.</em></p>
+        </div>
+
+        <div class="test-section">
+            <h2>Right Click Test</h2>
+            <p class="instructions">Right-click anywhere within this section, or specifically on the grey area below. A context menu (a small menu with options like "Back", "Reload", "Inspect", etc.) should appear if your right mouse button is working.</p>
+            <div class="test-area">
+                Right-click in this area.
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Middle Click (Scroll Wheel Click) Test</h2>
+            <p class="instructions">
+                Many scroll wheels can also be clicked (this is often called a "middle click").
+                Try middle-clicking on this link:
+                <a href="https://www.google.com.au" target="_blank" class="test-link" rel="noopener noreferrer">Test Link (opens Google Australia)</a>.
+                If your middle click works, the link should typically open in a new browser tab.
+            </p>
+            <div class="test-area">
+                You can also try middle-clicking in this grey area. Some browsers might show a special scroll cursor or have other default behaviors.
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Scroll Wheel Test</h2>
+            <p class="instructions">Try scrolling up and down using your mouse wheel while your cursor is over this page. The page content should move up or down accordingly. Test within the smaller scrollable area below as well.</p>
+            <div class="test-area" style="height: 100px; overflow-y: scroll; display:block; text-align:left; background-color: #f8f9fa;">
+                <p>Scrollable Area Line 1</p>
+                <p>Scrollable Area Line 2</p>
+                <p>Scrollable Area Line 3</p>
+                <p>Scrollable Area Line 4</p>
+                <p>Scrollable Area Line 5</p>
+                <p>Scrollable Area Line 6</p>
+                <p>Scrollable Area Line 7</p>
+                <p>Scrollable Area Line 8 - If you can scroll to see this, your scroll wheel is likely working.</p>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Mouse Movement Test</h2>
+            <p class="instructions">Move your mouse pointer around the screen, over this text, and within the grey area below. If your mouse is working correctly, the pointer on your screen should move smoothly and accurately correspond to your physical mouse movements.</p>
+            <div class="test-area" style="height: 80px;">
+                Move your mouse cursor smoothly over this area.
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p>This is a basic HTML-only mouse tester for manual checks. For advanced diagnostics or intermittent issues, dedicated software or professional assistance may be required.</p>
+        <p><strong>How to embed on Squarespace:</strong> Copy the entire HTML content of this page (Ctrl+A or Cmd+A, then Ctrl+C or Cmd+C). In your Squarespace editor, add a "Code Block" to your page and paste this HTML code into it. Ensure "HTML" mode is selected in the Code Block settings.</p>
+    </footer>
+</body>
+</html>
